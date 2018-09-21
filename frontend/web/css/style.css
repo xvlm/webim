@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #4d4d4d;
+    font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+    background: #f5f5f5 url('../static/bg.jpg') no-repeat center;
+    background-size: cover;
+    font-smoothing: antialiased;
+}
+ul {
+    list-style: none;
+}
+.ant-input-lg {
+    padding: 6px 11px;
+    padding-left: 11px;
+    height: 40px;
+    font-size: 16px;
+}
+
+
+
+#app .main,#app .sidebar {
+    height: 100%
+}
+
+
+#app .main {
+    position: relative;
+    overflow: hidden;
+    background-color: #eee
+}
+
+
+
+#app .message {
+    height: calc(100% - 160px)
+}
+.card {
+    padding: 12px;
+    border-bottom: 1px solid #24272c
+}
+
+.card footer {
+    margin-top: 10px
+}
+
+.card .avatar,.card .name {
+    vertical-align: middle
+}
+
+.card .avatar {
+    border-radius: 2px
+}
+
+.card .name {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    font-size: 16px
+}
+
+.card .search {
+    padding: 0 10px;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    outline: none;
+    background-color: #26292e
+}
+.list li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #292c33;
+    cursor: pointer;
+    -webkit-transition: background-color .1s;
+    transition: background-color .1s
+}
+
+.list li:hover {
+    background-color: hsla(0,0%,100%,.03)
+}
+
+.list li.active {
+    background-color: hsla(0,0%,100%,.1)
+}
+
+.list .avatar,.list .name {
+    vertical-align: middle
+}
+
+.list .avatar {
+    border-radius: 2px
+}
+
+.list .name {
+    display: inline-block;
+    margin: 0 0 0 15px
+}
+.textarea {
+    height: 160px;
+    border-top: 1px solid #ddd
+}
+
+.textarea textarea {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Micrsofot Yahei;
+    resize: none
+}
+.message {
+    padding: 10px 15px;
+    overflow-y: scroll
+}
+
+.message li {
+    margin-bottom: 15px
+}
+
+.message .time {
+    margin: 7px 0;
+    text-align: center
+}
+
+.message .time>span {
+    display: inline-block;
+    padding: 0 18px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #dcdcdc
+}
+
+.message .avatar {
+    float: left;
+    margin: 0 10px 0 0;
+    border-radius: 3px
+}
+
+.message .text {
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    max-width: calc(100% - 40px);
+    min-height: 30px;
+    line-height: 2.5;
+    font-size: 12px;
+    text-align: left;
+    word-break: break-all;
+    background-color: #fafafa;
+    border-radius: 4px
+}
+
+.message .text:before {
+    content: " ";
+    position: absolute;
+    top: 9px;
+    right: 100%;
+    border: 6px solid transparent;
+    border-right-color: #fafafa
+}
+
+.message .self {
+    text-align: right
+}
+
+.message .self .avatar {
+    float: right;
+    margin: 0 0 0 10px
+}
+
+.message .self .text {
+    background-color: #b2e281
+}
+
+.message .self .text:before {
+    right: inherit;
+    left: 100%;
+    border-right-color: transparent;
+    border-left-color: #b2e281
+}
+
+@media (max-width:768px){
+    #app {
+        margin: 20px auto;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 3px
+    }
+    #app .sidebar {
+        display:none;
+        float: left;
+        width: 100%;
+        color: #f4f4f4;
+        background-color: #2e3238
+    }
+    .topbar{height:30px;background-color:#4d4d4d;}
+    .topbar span{line-height:30px;margin-left:10px;color:#fff;font-weight:bold;cursor:pointer;}
+}
+@media (min-width:768px){
+    #app {
+        margin: 20px auto;
+        width: 800px;
+        height: 600px;
+        overflow: hidden;
+        border-radius: 3px
+    }
+    #app .sidebar {
+        float: left;
+        width: 200px;
+        color: #f4f4f4;
+        background-color: #2e3238
+    }
+    .topbar{display:none;}
+}
+
+body{color: #4d4d4d; font-family:"微软雅黑"; font-size:14px;}
+.wrap1{position:absolute; top:0; right:0; bottom:0; left:0; margin:auto }/*把整个屏幕真正撑开--而且能自己实现居中*/
+.main_content{background:#eee; margin-left:auto; margin-right:auto; text-align:left; float:none; border-radius:8px;}
+.form-group{position:relative;}
+.login_btn{display:block; background:#3872f6; color:#fff; font-size:15px; width:100%; line-height:50px; border-radius:3px; border:none; }
+.login_input{width:100%; border:1px solid #4d4d4d; border-radius:3px; line-height:40px; padding:2px 5px 2px 30px; background:none;}
+.icon_font{position:absolute; top:15px; left:10px; font-size:18px; color:#4d4d4d;}
+.font16{font-size:16px;}
+.mg-t20{margin-top:20px;}
+@media (min-width:200px){.pd-xs-20{padding:20px;}}
+@media (min-width:768px){.pd-sm-50{padding:50px;}}
+#grad {
+    background: -webkit-linear-gradient(#4990c1, #52a3d2, #6186a3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#4990c1, #52a3d2, #6186a3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#4990c1, #52a3d2, #6186a3); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#4990c1, #52a3d2, #6186a3); /* 标准的语法 */
+}

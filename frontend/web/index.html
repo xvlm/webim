@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>实时聊天系统</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container wrap1 module" style="height:450px;display:none;" id="register">
+        <h2 class="mg-b20 text-center">实时聊天系统</h2>
+        <div class="col-sm-8 col-md-5 center-auto pd-sm-50 pd-xs-20 main_content">
+            <p class="text-center font16">注册新用户</p>
+            <form onsubmit="return register(this)">
+                <input type="hidden" name="module" value="register" />
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-user"></i>
+                    <input name="username" type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-lock"></i>
+                    <input name="password" type="password" class="login_input" id="Password1" placeholder="请输入密码" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-lock"></i>
+                    <input name="passwordr" type="password" class="login_input" id="Password1" placeholder="重复输入密码" />
+                </div>
+                <button style="submit" class="login_btn">注 册</button>
+            </form>
+            <div style="margin-top:10px;height:20px;">
+                <div style="float:left;" class="toForgetPwd">忘记密码</div>
+                <div style="float:right;" class="toLogin">也有账号登录</div>
+            </div>
+            <div class="alterdiv"></div>
+        </div>
+    </div>
+
+    <div class="container wrap1 module" style="height:450px;" id="login">
+        <h2 class="mg-b20 text-center">实时聊天系统</h2>
+        <div class="col-sm-8 col-md-5 center-auto pd-sm-50 pd-xs-20 main_content">
+            <p class="text-center font16">登录</p>
+            <form onsubmit="return login(this)">
+                <input type="hidden" name="module" value="login" />
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-user"></i>
+                    <input name="username" type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-lock"></i>
+                    <input name="password" type="password" class="login_input" id="Password1" placeholder="请输入密码" />
+                </div>
+                <button style="submit" class="login_btn">登 录</button>
+            </form>
+            <div style="margin-top:10px;height:20px;">
+                <div style="float:left;" class="toForgetPwd">忘记密码</div>
+                <div style="float:right;" class="toReg">注册</div>
+            </div>
+            <div class="alterdiv"></div>
+
+        </div>
+    </div>
+
+    <div class="container wrap1 module" style="height:450px;display:none;" id="forgetpwd" style="display:none">
+        <h2 class="mg-b20 text-center">实时聊天系统</h2>
+        <div class="col-sm-8 col-md-5 center-auto pd-sm-50 pd-xs-20 main_content">
+            <p class="text-center font16">忘记密码</p>
+            <form onsubmit="return forgetpwd(this)">
+                <input type="hidden" name="module" value="forgetpwd" />
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-user"></i>
+                    <input type="email" class="login_input" id="Email1" placeholder="请输入用户名" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-lock"></i>
+                    <input type="password" class="login_input" id="Password1" placeholder="请输入密码" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-lock"></i>
+                    <input type="password" class="login_input" id="Password1" placeholder="重复输入密码" />
+                </div>
+                <button style="submit" class="login_btn">注 册</button>
+            </form>
+            <div style="margin-top:10px;height:20px;">
+                <div style="float:left;" class="toReg">注册</div>
+                <div style="float:right;" class="toLogin">也有账号登录</div>
+            </div>
+            <div class="alterdiv"></div>
+        </div>
+    </div>
+
+    <div id="app" class="module" style="display:none">
+        <div class="sidebar">
+            <div class="card">
+                <header>
+                    <img class="avatar" alt="coffce" src="static/1.jpg" width="40" height="40" />
+                    <p class="name"></p>
+                </header>
+                <footer>
+                    <input class="search" placeholder="search user..." type="text" />
+                </footer>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <img class="avatar" alt="示例介绍" src="static/2.png" width="30" height="30" />
+                        <p class="name">出纳 赵XX</p>
+                    </li>
+                    <li>
+                        <img class="avatar" alt="webpack" src="static/3.jpg" width="30" height="30" />
+                        <p class="name">前台 张XX</p>
+                    </li>
+                    <li>
+                        <img class="avatar" alt="webpack" src="static/3.jpg" width="30" height="30" />
+                        <p class="name">产品经理 孙XX</p>
+                    </li>
+                    <li>
+                        <img class="avatar" alt="示例介绍" src="static/2.png" width="30" height="30" />
+                        <p class="name">项目经理 李XX</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <span>&lt;</span>
+            </div>
+            <div class="message">
+                <div class="alterdiv"></div>
+                <ul>
+                    <li>
+                        <p class="time">
+                            <span>10:15</span>
+                        </p>
+                        <div class="main">
+                            <img class="avatar" src="static/2.png" width="30" height="30" />
+                            <div class="text">
+                                Hello，这是一个基于Socket的实时聊天系统
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="time">
+                            <span>10:16</span>
+                        </p>
+                        <div class="main self">
+                            <img class="avatar" src="static/1.jpg" width="30" height="30" />
+                            <div class="text">
+                                1
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="textarea">
+                <textarea placeholder="按 Ctrl + Enter 发送"></textarea>
+                <input type="hidden" id="toUsername" value=""/>
+            </div>
+        </div>
+
+    </div>
+    <script src="./static/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var ws = null;
+        $(function () {
+            //---- 侧边栏控制 ------
+            //点击返回按钮显示侧边栏
+            $('.topbar span').click(function () {
+                $('.sidebar').show();
+            });
+            //屏幕宽度小于768px时，点击侧边栏头像隐藏侧边栏
+            $('div.list ul li').click(function () {
+                if ($(window).width() <= 768) {
+                    $('.sidebar').hide();
+                }
+            });
+            $('.textarea textarea').keydown(function (event) {
+                // 监听 Ctrl + Enter 可全屏查看 
+                if (event.ctrlKey && event.keyCode == 13 ){
+                    sendChat($(this).val());
+                }
+             });
+            startClient();
+        });
+
+        //---- 模块调用控制 ------
+        function showModule(module) {
+            console.log(module);
+            $('div.module').hide(0, function () {
+                setTimeout(function () { $('#' + module).fadeIn(200) }, 50);
+            });
+        }
+        $('.toReg').css('cursor', 'pointer').click(function () {
+            showModule('register');
+        });
+        $('.toLogin').css('cursor', 'pointer').click(function () {
+            showModule('login');
+        });
+        $('.toForgetPwd').css('cursor', 'pointer').click(function () {
+            showModule('forgetpwd');
+        });
+
+        //发送登录请求
+        function login(form) {
+            var data = JSON.stringify($(form).serializeArray());
+            ws.send(data);
+            return false;
+        }
+        //发送注册请求
+        function register(form) {
+            var data = JSON.stringify($(form).serializeArray());
+            ws.send(data);
+            return false;
+        }
+        //主界面初始化
+        function appInit() {
+            var data = JSON.stringify([{name:'module',value:'app'}]);
+            ws.send(data);
+            return false;
+        }
+        //实时聊天初始化
+        function chatInit(toUsername) {
+           $('input#toUsername').val(toUsername);
+           addMsg( {toUsername:toUsername,'time':Date(),self:'self',msg:'开始对话：'+toUsername});
+           showMsg( toUsername );
+        }
+        //创建聊天窗口
+        function createMsg(toUsername ){
+            if( $('.main .message ul[to='+toUsername+']').length === 0 ){
+                $('.main .message').append('<ul to="'+toUsername+'"></ul>');
+            }
+        }
+        //显示聊天内容
+        function showMsg(toUsername ){
+            $('.main .message ul').hide();
+            $('.main .message ul[to='+toUsername+']').show();
+        }
+        //添加聊天内容
+        function addMsg(msg){
+            createMsg(msg.toUsername);
+            var $ul = $('.main .message ul[to='+msg.toUsername+']');
+            $ul.append('<li><p class="time"><span>'+msg.time+'</span></p><div class="main '+msg.self+'"><img class="avatar" src="static/1.jpg" width="30" height="30" /><div class="text">'+msg.msg+'</div></div></li>');
+            $('.message').scrollTop($('.message')[0].scrollHeight );
+        }
+        //发送聊天内容
+        function sendChat( data ){
+            var toUsername = $('input#toUsername').val();
+            var msg = JSON.stringify([
+                {name:'module',value:'chat'},
+                {name:'toUsername',value:toUsername},
+                {name:'msg',value:data},
+            ]);
+            ws.send(msg);
+            addMsg( {toUsername:toUsername,'time':curtime(),self:'self',msg:data});
+            return false;
+        }
+
+        function curtime(){
+            var newDate=new Date();
+            var year=newDate.getFullYear();
+            var month=(newDate.getMonth()+1)<10?"0"+(newDate.getMonth()+1):newDate.getMonth()+1;
+            var day=newDate.getDay()<10?"0"+newDate.getDay():newDate.getDay();
+            var hours=newDate.getHours()<10?"0"+newDate.getHours():newDate.getHours();
+            var minuts=newDate.getMinutes()<10?"0"+newDate.getMinutes():newDate.getMinutes();
+            var seconds=newDate.getSeconds()<10?"0"+newDate.getSeconds():newDate.getSeconds();
+            return year+"-"+month+"-"+day+" "+hours+":"+minuts+":"+seconds;    
+        }
+        //开启客户端
+        function startClient() {
+            try {
+                ws = new WebSocket("ws://centos:9601");//连接服务器,改成你服务器地址
+                ws.onopen = function (event) {
+                    alert("已经与服务器建立了连接\r\n当前连接状态：" + this.readyState);
+                };
+                ws.onmessage = function (event) {
+                    console.log('message',event.data);
+                    try {
+                        var data = JSON.parse(event.data);
+                    }
+                    catch (e) {
+                        console.log(e);
+                        return false;
+                    }
+                    if (data.err === 0) {
+                        switch (data.module) {
+                            case 'login': {
+                                alert('登陆成功');
+                                showModule('app');
+                                appInit();
+                                break;
+                            }
+                            case 'register': {
+                                alert('注册成功');
+                                break;
+                            }
+                            case 'forgetpwd': {
+                                alert('找回成功');
+                                break;
+                            }
+                            case 'app': {
+                                if( data.act === 'onlinelist'){
+                                    var list = [];
+                                    for(const i in data.data){
+                                        list.push( ['<li onClick="chatInit(',"'",data.data[i],"')",'">',data.data[i],'</li>'].join(''));
+                                    }
+                                    $('#app .sidebar ul').html(list.join(''));
+                                }
+                                else if( data.act === 'userinfo'){
+                                    $('#app .sidebar head .name').html(data.username);
+                                }
+                                else if(data.act==='chat'){
+                                    for(const i in data.msg){
+                                        const msg = data.msg[i];
+                                        console.log( msg);
+                                        addMsg(msg);
+                                        showMsg(msg.toUsername);
+                                    }
+                                    $('#app .sidebar ul').html(list.join(''));
+                                }
+                                break;
+                            }
+                        }
+                    } else {
+                        $('#' + data.module + ' .alterdiv').html('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><strong>ERR:</strong> ' + data.msg + '</div>');
+                    }
+                    console.log(data);
+                    // if (chat_data[1] == user_id) {
+                    //     var chat_html = '<div class="media"><div class="media-body">';
+                    //     chat_html += '<h4 class="media-heading text-right">我方 (' + chat_data[0] + ')</h4><div class="clearfix">';
+                    //     chat_html += '<div class="right mess-wrap-right"><p>' + chat_data[3] + '</p></div></div></div>';
+                    //     chat_html += '<div class="media-right"><a href="#"><img src="http://www.ncc.dev/Wp-contEnt/themes/ncc/img/logo.png"></a></div></div>';
+                    //     $("#chat_content").append(chat_html);
+                    // }
+                    // else if (chat_data[1] == to_userid) {
+                    //     var chat_html = '<div class="media"><div class="media-left">';
+                    //     chat_html += '<a href="#"><img src="http://www.ncc.dev/Wp-contEnt/themes/ncc/img/logo.png"></a></div>';
+                    //     chat_html += '<div class="media-body"><h4 class="media-heading">' + chat_data[2] + ' (' + chat_data[0] + ')</h4>';
+                    //     chat_html += '<div class="clearfix"><div class="left mess-wrap-left"><p>' + chat_data[3] + '</p></div></div></div></div>';
+                    //     $("#chat_content").append(chat_html);
+                    // }
+                };
+                ws.onclose = function (event) {
+                    alert("已经与服务器断开连接\r\n当前连接状态：" + this.readyState);
+                    showModule('login');
+                    startClient();
+                };
+                ws.onerror = function (event) {
+                    alert("WebSocket异常！");
+                };
+            } catch (ex) {
+                alert(ex.message);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
