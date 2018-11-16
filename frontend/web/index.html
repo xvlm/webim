@@ -7,7 +7,7 @@
     <title>实时聊天系统</title>
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./static/css/slide.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -21,6 +21,10 @@
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-user"></i>
                     <input name="username" type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
+                </div>
+                <div class="form-group mg-t20">
+                    <i class="icon_font glyphicon glyphicon-envelope"></i>
+                    <input type="email" class="login_input" id="Email1" name="email" placeholder="请输入邮箱" />
                 </div>
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-lock"></i>
@@ -48,13 +52,17 @@
                 <input type="hidden" name="module" value="login" />
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-user"></i>
-                    <input name="username" type="text" class="login_input" id="Email1" placeholder="请输入用户名" />
+                    <input name="username" type="text" class="login_input" id="username" placeholder="请输入用户名" />
                 </div>
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-lock"></i>
                     <input name="password" type="password" class="login_input" id="Password1" placeholder="请输入密码" />
                 </div>
-                <button style="submit" class="login_btn">登 录</button>
+                <div class="form-group mg-t20">
+                    <div id="imgscode"></div>
+                </div>
+
+                <button type="submit" class="login_btn">登 录</button>
             </form>
             <div style="margin-top:10px;height:20px;">
                 <div style="float:left;" class="toForgetPwd">忘记密码</div>
@@ -73,8 +81,9 @@
                 <input type="hidden" name="module" value="forgetpwd" />
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-user"></i>
-                    <input type="email" class="login_input" id="Email1" placeholder="请输入用户名" />
+                    <input type="text" class="login_input" id="username" placeholder="请输入用户名" />
                 </div>
+
                 <div class="form-group mg-t20">
                     <i class="icon_font glyphicon glyphicon-lock"></i>
                     <input type="password" class="login_input" id="Password1" placeholder="请输入密码" />
@@ -98,7 +107,7 @@
             <div class="card">
                 <header>
                     <img class="avatar" alt="coffce" src="static/1.jpg" width="40" height="40" />
-                    <p class="name"></p>
+                    <p class="loginout">退出</p>
                 </header>
                 <footer>
                     <input class="search" placeholder="search user..." type="text" />
@@ -143,22 +152,12 @@
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <p class="time">
-                            <span>10:16</span>
-                        </p>
-                        <div class="main self">
-                            <img class="avatar" src="static/1.jpg" width="30" height="30" />
-                            <div class="text">
-                                1
-                            </div>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
             <div class="textarea">
                 <textarea placeholder="按 Ctrl + Enter 发送"></textarea>
-                <input type="hidden" id="toUsername" value=""/>
+                <input type="hidden" id="toUsername" value="" />
             </div>
         </div>
 
@@ -166,9 +165,12 @@
     <script src="./static/jquery.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script src="./static/js/jquery.lgyslide.js"></script>
     <script type="text/javascript">
         var ws = null;
+        var username = '';
         $(function () {
+
             //---- 侧边栏控制 ------
             //点击返回按钮显示侧边栏
             $('.topbar span').click(function () {
@@ -182,10 +184,14 @@
             });
             $('.textarea textarea').keydown(function (event) {
                 // 监听 Ctrl + Enter 可全屏查看 
-                if (event.ctrlKey && event.keyCode == 13 ){
+                if (event.ctrlKey && event.keyCode == 13) {
                     sendChat($(this).val());
+                    $(this).val('');
                 }
-             });
+            });
+            $('.loginout').click(function (event) {
+                showModule('login');
+            });
             startClient();
         });
 
@@ -208,8 +214,36 @@
 
         //发送登录请求
         function login(form) {
-            var data = JSON.stringify($(form).serializeArray());
-            ws.send(data);
+            // 验证码
+            $('#imgscode').slideVerify({
+                type: 2,		//类型
+                vOffset: 5,	//误差量，根据需求自行调整
+                vSpace: 1,	//间隔
+                // imgName : [ctxRoot+'/style/image/verify/1.jpg', ctxRoot+'/style/image/verify/2.jpg'],
+                imgSize: {
+                    width: '100%',
+                    height: '200px',
+                },
+                blockSize: {
+                    width: '40px',
+                    height: '40px',
+                },
+                barSize: {
+                    width: '100%',
+                    height: '42px',
+                },
+                ready: function () {
+                },
+                success: function () {
+                    var data = JSON.stringify($(form).serializeArray());
+                    ws.send(data);
+                    username = $(form).find('input#username').val();
+                },
+                error: function () {
+                    alert('验证失败！');
+                }
+
+            });
             return false;
         }
         //发送注册请求
@@ -220,56 +254,56 @@
         }
         //主界面初始化
         function appInit() {
-            var data = JSON.stringify([{name:'module',value:'app'}]);
+            var data = JSON.stringify([{ name: 'module', value: 'app' }]);
             ws.send(data);
             return false;
         }
         //实时聊天初始化
         function chatInit(toUsername) {
-           $('input#toUsername').val(toUsername);
-           addMsg( {toUsername:toUsername,'time':Date(),self:'self',msg:'开始对话：'+toUsername});
-           showMsg( toUsername );
+            $('input#toUsername').val(toUsername);
+            addMsg({ toUsername: toUsername, 'time': Date(), self: 'self', msg: '开始对话：' + toUsername });
+            showMsg(toUsername);
         }
         //创建聊天窗口
-        function createMsg(toUsername ){
-            if( $('.main .message ul[to='+toUsername+']').length === 0 ){
-                $('.main .message').append('<ul to="'+toUsername+'"></ul>');
+        function createMsg(toUsername) {
+            if ($('.main .message ul[to=' + toUsername + ']').length === 0) {
+                $('.main .message').append('<ul to="' + toUsername + '"></ul>');
             }
         }
         //显示聊天内容
-        function showMsg(toUsername ){
+        function showMsg(toUsername) {
             $('.main .message ul').hide();
-            $('.main .message ul[to='+toUsername+']').show();
+            $('.main .message ul[to=' + toUsername + ']').show();
         }
         //添加聊天内容
-        function addMsg(msg){
+        function addMsg(msg) {
             createMsg(msg.toUsername);
-            var $ul = $('.main .message ul[to='+msg.toUsername+']');
-            $ul.append('<li><p class="time"><span>'+msg.time+'</span></p><div class="main '+msg.self+'"><img class="avatar" src="static/1.jpg" width="30" height="30" /><div class="text">'+msg.msg+'</div></div></li>');
-            $('.message').scrollTop($('.message')[0].scrollHeight );
+            var $ul = $('.main .message ul[to=' + msg.toUsername + ']');
+            $ul.append('<li><p class="time"><span>' + msg.time + '</span></p><div class="main ' + msg.self + '"><img class="avatar" src="static/1.jpg" width="30" height="30" /><div class="text">' + msg.msg + '</div></div></li>');
+            $('.message').scrollTop($('.message')[0].scrollHeight);
         }
         //发送聊天内容
-        function sendChat( data ){
+        function sendChat(data) {
             var toUsername = $('input#toUsername').val();
             var msg = JSON.stringify([
-                {name:'module',value:'chat'},
-                {name:'toUsername',value:toUsername},
-                {name:'msg',value:data},
+                { name: 'module', value: 'chat' },
+                { name: 'toUsername', value: toUsername },
+                { name: 'msg', value: data },
             ]);
             ws.send(msg);
-            addMsg( {toUsername:toUsername,'time':curtime(),self:'self',msg:data});
+            addMsg({ toUsername: toUsername, 'time': curtime(), self: 'self', msg: data });
             return false;
         }
 
-        function curtime(){
-            var newDate=new Date();
-            var year=newDate.getFullYear();
-            var month=(newDate.getMonth()+1)<10?"0"+(newDate.getMonth()+1):newDate.getMonth()+1;
-            var day=newDate.getDay()<10?"0"+newDate.getDay():newDate.getDay();
-            var hours=newDate.getHours()<10?"0"+newDate.getHours():newDate.getHours();
-            var minuts=newDate.getMinutes()<10?"0"+newDate.getMinutes():newDate.getMinutes();
-            var seconds=newDate.getSeconds()<10?"0"+newDate.getSeconds():newDate.getSeconds();
-            return year+"-"+month+"-"+day+" "+hours+":"+minuts+":"+seconds;    
+        function curtime() {
+            var newDate = new Date();
+            var year = newDate.getFullYear();
+            var month = (newDate.getMonth() + 1) < 10 ? "0" + (newDate.getMonth() + 1) : newDate.getMonth() + 1;
+            var day = newDate.getDay() < 10 ? "0" + newDate.getDay() : newDate.getDay();
+            var hours = newDate.getHours() < 10 ? "0" + newDate.getHours() : newDate.getHours();
+            var minuts = newDate.getMinutes() < 10 ? "0" + newDate.getMinutes() : newDate.getMinutes();
+            var seconds = newDate.getSeconds() < 10 ? "0" + newDate.getSeconds() : newDate.getSeconds();
+            return year + "-" + month + "-" + day + " " + hours + ":" + minuts + ":" + seconds;
         }
         //开启客户端
         function startClient() {
@@ -279,7 +313,7 @@
                     alert("已经与服务器建立了连接\r\n当前连接状态：" + this.readyState);
                 };
                 ws.onmessage = function (event) {
-                    console.log('message',event.data);
+                    console.log('message', event.data);
                     try {
                         var data = JSON.parse(event.data);
                     }
@@ -304,20 +338,23 @@
                                 break;
                             }
                             case 'app': {
-                                if( data.act === 'onlinelist'){
+                                if (data.act === 'onlinelist') {
+                                    console.log(data.data);
                                     var list = [];
-                                    for(const i in data.data){
-                                        list.push( ['<li onClick="chatInit(',"'",data.data[i],"')",'">',data.data[i],'</li>'].join(''));
+                                    for (const i in data.data) {
+                                        if (data.data[i] !== username) {
+                                            list.push(['<li onClick="chatInit(', "'", HTMLEnCode(data.data[i]), "')", '">', data.data[i], '</li>'].join(''));
+                                        }
                                     }
                                     $('#app .sidebar ul').html(list.join(''));
                                 }
-                                else if( data.act === 'userinfo'){
+                                else if (data.act === 'userinfo') {
                                     $('#app .sidebar head .name').html(data.username);
                                 }
-                                else if(data.act==='chat'){
-                                    for(const i in data.msg){
+                                else if (data.act === 'chat') {
+                                    for (const i in data.msg) {
                                         const msg = data.msg[i];
-                                        console.log( msg);
+                                        console.log(msg);
                                         addMsg(msg);
                                         showMsg(msg.toUsername);
                                     }
@@ -356,9 +393,28 @@
             } catch (ex) {
                 alert(ex.message);
             }
+
+
         }
 
+        function HTMLEnCode(str) {
+            var s = "";
+            if (str.length == 0) return "";
+            s = str.replace(/&/g, "&gt;");
+            s = s.replace(/</g, "&lt;");
+            s = s.replace(/>/g, "&gt;");
+            s = s.replace(/    /g, "&nbsp;");
+            s = s.replace(/\'/g, "'");
+            s = s.replace(/\"/g, "&quot;");
+            s = s.replace(/\n/g, "<br>");
+            s = s.replace(/@/g, "at");
+            s = s.replace(/\./g, "dot");
+            return s;
+        }
+
+
     </script>
+
 </body>
 
 </html>

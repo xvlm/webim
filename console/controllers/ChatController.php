@@ -246,7 +246,7 @@ public function onlinelist($server)
     $msg = ['module' => 'app', 'act' => 'onlinelist', 'err' => 0, 'data' => []];
     $redis = Yii::$app->redis;
     //获取在线用户列表
-    $msg['data'] = $redis->hgetall(HASH_USERNAME2FD);
+    $msg['data'] = $redis->hkeys(HASH_USERNAME2FD);
     $fd = $redis->hkeys(HASH_FD2USERINFO);
     foreach ($fd as $key => $value) {
         $this->send($server, $value, $msg);
