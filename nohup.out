@@ -1,0 +1,414 @@
+time:2018-11-16 06:11:40 IM Server Start
+IP:0.0.0.0 PORT:9601
+Client Connected:1
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 1, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 1, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-15 22:11:46 *77347.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-15 22:11:46 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:2
+Client Connected:3
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 3, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 3, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-15 23:52:44 *77348.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-15 23:52:44 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:4
+time:2018-11-16 07:52:54 message:4 module:login
+time:2018-11-16 07:52:56 message:4 module:app
+[2018-11-15 23:52:56 *79936.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=3] is closed.
+[2018-11-15 23:52:56 *79936.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=1] is closed.
+time:2018-11-16 07:53:13 message:2 module:login
+time:2018-11-16 07:53:22 message:2 module:login
+time:2018-11-16 07:53:24 message:2 module:app
+[2018-11-15 23:53:24 *79936.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=3] is closed.
+[2018-11-15 23:53:24 *79936.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=1] is closed.
+time:2018-11-16 07:53:40 message:2 module:chat
+TOFD:4
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 235
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-15 23:53:40 *79936.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): con
+[2018-11-15 23:53:40 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+time:2018-11-16 07:53:50 message:4 module:chat
+TOFD:2
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 235
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-15 23:53:50 *79971.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): con
+[2018-11-15 23:53:50 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:5
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 5, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 5, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 06:01:36 *79973.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 06:01:36 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:6
+Client Connected:7
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 7, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 7, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:52:29 *80164.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 16:52:29 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:8
+Client Connected:9
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 9, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 9, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:55:22 *80893.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 16:55:22 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:10
+time:2018-11-17 00:55:42 message:10 module:login
+time:2018-11-17 00:56:01 message:10 module:login
+time:2018-11-17 00:56:03 message:10 module:app
+[2018-11-16 16:56:03 *80970.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=3] is closed.
+[2018-11-16 16:56:03 *80970.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=1] is closed.
+[2018-11-16 16:56:03 *80970.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=9] is closed.
+[2018-11-16 16:56:03 *80970.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=7] is closed.
+[2018-11-16 16:56:03 *80970.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=5] is closed.
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 2, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 2, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:56:03 *80970.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 16:56:03 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 4, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 4, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:56:03 *80995.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 16:56:03 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 6, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 6, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\base'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:56:03 *80996.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 16:56:03 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+time:2018-11-17 00:56:13 message:8 module:login
+time:2018-11-17 00:56:15 message:8 module:app
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=2] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=3] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=4] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=1] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=6] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=9] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=7] is closed.
+[2018-11-16 16:56:15 *80997.0]	ERROR	swFactoryProcess_finish (ERROR 1004): send 70 byte failed, because connection[fd=5] is closed.
+time:2018-11-17 00:56:21 message:8 module:chat
+TOFD:10
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 235
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): console\controllers\ChatController->chat(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame), Array)
+#2 [internal function]: console\controllers\ChatController::console\controllers\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 {main}
+  thrown'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 16:56:21 *80997.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Use of undefined constant HASH_READLIST - assumed 'HASH_READLIST'' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:235
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(235): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/mnt/hgfs/proje...', 235, Array)
+#1 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(84): con
+[2018-11-16 16:56:21 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:11
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 11, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\bas in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 11, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\bas'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-16 17:02:37 *81000.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-16 17:02:37 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+Client Connected:12
+Client Connected:13
+Client Connected:14
+PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 14, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\bas in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php on line 145
+PHP Fatal Error 'yii\base\ErrorException' with message 'Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Server), 14, 0)
+#2 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(157): Swoole\Http\Server->start()
+#3 [internal function]: console\controllers\ChatController->actionServer()
+#4 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /mnt/hgfs/projects/yii-advanced-app-2.0.15/vendor/yiisoft/yii2/console/Controller.php(148): yii\bas'
+
+in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+[2018-11-17 21:16:57 *81215.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught exception 'yii\base\ErrorException' with message 'Undefined variable: userinfo' in /mnt/hgfs/projects/websocket/console/controllers/ChatController.php:145
+Stack trace:
+#0 /mnt/hgfs/projects/websocket/console/controllers/ChatController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/mnt/hgfs/proje...', 145, Array)
+#1 [internal function]: console\controllers\ChatController->console\controllers\{closure}(Object(Swoole\WebSocket\Se
+[2018-11-17 21:16:57 $77345.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
